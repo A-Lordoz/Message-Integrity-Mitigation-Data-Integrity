@@ -62,10 +62,11 @@ Tampered messages are rejected
 Invalid MACs are not accepted
 
 ## Secure Implementation Highlights
-### Security Feature                	Applied Technique
-Message Integrity	                HMAC with SHA-256
-Input Hardening                 	Sanitizes message format and parameters
-Timing Resistance               	Uses hmac.compare_digest() for MAC checks
+|Security Feature         |Applied Technique                        | 
+|-------------------------|-----------------------------------------|              	
+|`Message Integrity`	    |HMAC with SHA-256                        |
+|`Input Hardening`        |Sanitizes message format and parameters  |
+|`Timing Resistance`      |Uses hmac.compare_digest() for MAC checks|
 
 
 ## Attack Fix Comparison
