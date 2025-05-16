@@ -64,13 +64,14 @@ Invalid MACs are not accepted
 ## Secure Implementation Highlights
 |Security Feature         |Applied Technique                        | 
 |-------------------------|-----------------------------------------|              	
-|`Message Integrity`	    |HMAC with SHA-256                        |
+|`Message Integrity`	  |HMAC with SHA-256                        |
 |`Input Hardening`        |Sanitizes message format and parameters  |
 |`Timing Resistance`      |Uses hmac.compare_digest() for MAC checks|
 
 
 ## Attack Fix Comparison
-Threat Type         	Insecure Method	                HMAC Countermeasure
-Length Extension	    hash(secret + message)	        HMAC(key, message) using SHA-256
-Hash Collisions	        MD5	                            SHA-256 in HMAC
-Timing Disclosure	    == operator	                    compare_digest()
+|Threat Type      |Insecure Method	     |HMAC Countermeasure             |
+|-----------------|----------------------|--------------------------------|         	                 
+|Length Extension |hash(secret + message)|HMAC(key, message) using SHA-256|
+|Hash Collisions  |MD5	                 |SHA-256 in HMAC                 |
+|Timing Disclosure|== operator	         |compare_digest()                |
